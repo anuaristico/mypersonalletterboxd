@@ -72,6 +72,12 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/) e o [Python](https://ww
     ng serve
     ```
 
-    ## Exemplos de uso
     A aplicação estará disponível em `http://localhost:4200/`.
+
+    ## Exemplos de uso
+
+    <p align="center">
+      <img src="/imgs/1.png" alt="Imagem 1" width="45%" />
+      <img src="/imgs/2.png" alt="Imagem 2" width="45%" />
+    </p>
 
