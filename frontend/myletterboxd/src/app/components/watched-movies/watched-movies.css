@@ -1,0 +1,26 @@
+.watched-list {
+  padding: 1rem;
+  width: 500px;
+  list-style: none;
+  max-height: 491px;
+  overflow-y: auto;
+}
+
+.watched-movie {
+  display: flex;
+  margin-bottom: 1rem;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.poster {
+  width: 100px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}

@@ -1,0 +1,19 @@
+<div class="dialog-content">
+  <div class="movie-header">
+    <img [src]="'https://image.tmdb.org/t/p/w200/' + data.poster_path" alt="Poster">
+    <h2 >{{ data.title }}</h2>
+    <app-star-rating (ratingChange)="onRatingSelected($event)"></app-star-rating>
+  </div>
+
+    <textarea
+        [value]="comment()"
+        (input)="comment.set($any($event.target).value)"
+        placeholder="Leave a comment (optional)"
+        rows="4"
+        class="comment-input">
+    </textarea>
+  <div class="dialog-actions">
+    <button mat-raised-button class="save-button" (click)="submitReview()">Add movie</button>
+    <button mat-raised-button class="cancel-button" (click)="cancelReview()">Cancel</button>
+  </div>
+</div>

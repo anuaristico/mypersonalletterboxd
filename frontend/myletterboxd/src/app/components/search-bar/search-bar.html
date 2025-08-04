@@ -1,0 +1,41 @@
+<div id="container">
+    <div class="input-group">
+        <div class="input-icon">
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+        </div>
+        <input  
+            id="search" 
+            type="text" 
+            [(ngModel)]="query" 
+            class="input-field" 
+            (input)="search()" 
+            placeholder="Search for movies"/>
+    </div>
+
+    <ul class="search-results" *ngIf=query()>
+        <li class="search-result" *ngFor="let movie of results()">
+            <div class="movie-image">
+            <img *ngIf="movie.poster_path"
+                    [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+                    alt="{{ movie.title }}"
+                    width="150">
+            </div>
+            <div class="movie-content">
+                <h2 class ="item-title" (click)="openDialog(movie)" style="cursor: pointer;">{{ movie.title }}</h2>
+
+                <p class="movie-subtitle">
+                    ({{ movie.release_date.slice(0, 4) }})
+                </p>
+
+                <p class="movie-description">
+                    {{ movie.overview ? movie.overview : 'No description available.' }}
+                </p>
+            </div>
+        </li>
+
+        <li *ngIf="showNoResults()" id="no-results">
+            <p>No results found.</p>
+        </li>
+    </ul>
+</div>
+  

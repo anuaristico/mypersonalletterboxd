@@ -1,0 +1,11 @@
+<div class="watched-list">
+  <div *ngFor="let movie of watchedMovies" class="watched-movie">
+    <img [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path" alt="{{ movie.title }}" class="poster" />
+    <div class="movie-info">
+      <h3>{{ movie.title }}</h3>
+      <p><strong>Avaliação:</strong> {{ movie.rating }}/5</p>
+      <p><strong>Assistido em:</strong> {{ movie.watched_at | date:'short' }}</p>
+      <p *ngIf="movie.comment"><strong>Comentário:</strong> {{ movie.comment }}</p>
+    </div>
+  </div>
+</div>

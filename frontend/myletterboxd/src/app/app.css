@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #222429;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#title {
+  position: absolute;
+  font-family: 'Oswald', sans-serif;
+  top: 50px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+#title .icon {
+  height: 40px;
+  width: auto;
+}
+
+.app-elements {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 10rem;
+  margin-top: 180px;
+}
+
+app-search-bar {
+  position: relative;
+  margin-left: 60px;
+}
+
+app-watched-movies {
+  position: relative;
+  margin-right: 135px;
+}
